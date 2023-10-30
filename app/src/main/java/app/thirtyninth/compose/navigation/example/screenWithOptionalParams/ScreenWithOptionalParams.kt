@@ -1,4 +1,4 @@
-package app.thirtyninth.compose.navigation.example.defaultScreenWithOptionalParams
+package app.thirtyninth.compose.navigation.example.screenWithOptionalParams
 
 import android.os.Bundle
 import androidx.compose.foundation.background
@@ -30,7 +30,7 @@ import app.thirtyninth.compose.navigation.example.screens.DefaultScreenNameExten
 import app.thirtyninth.compose.navigation.example.screens.Screen
 import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtension.screenNameWithOptionalParams
 
-object DefaultScreenWithOptionalParams : Screen {
+object ScreenWithOptionalParams : Screen {
     private const val OPTIONAL_PARAM = "OPTIONAL_PARAM"
 
     override val navArgs: List<NamedNavArgument> = listOf(
