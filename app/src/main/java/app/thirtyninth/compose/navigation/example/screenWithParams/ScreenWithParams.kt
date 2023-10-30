@@ -1,4 +1,4 @@
-package app.thirtyninth.compose.navigation.example.defaultScreenWithParams
+package app.thirtyninth.compose.navigation.example.screenWithParams
 
 import android.os.Bundle
 import androidx.compose.foundation.background
@@ -25,12 +25,12 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavController
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
-import app.thirtyninth.compose.navigation.example.R.string
+import app.thirtyninth.compose.navigation.example.R
 import app.thirtyninth.compose.navigation.example.screens.DefaultScreenNameExtensions.defaultScreenNameWithOptionalParams
 import app.thirtyninth.compose.navigation.example.screens.Screen
 import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtension.screenNameWithOptionalParams
 
-object DefaultScreenWithParams : Screen {
+object ScreenWithParams : Screen {
     private const val REQUIRED_PARAM = "REQUIRED_PARAM"
     private const val OPTIONAL_PARAM = "OPTIONAL_PARAM"
 
@@ -52,17 +52,23 @@ object DefaultScreenWithParams : Screen {
 
     fun screenNameWithRequiredArgument(
         argument: String
-    ) = screenNameWithOptionalParams(emptyList())
-
-    fun screenNameWithArgument(
-        argument: String,
     ) = screenNameWithOptionalParams(
-        listOf(OPTIONAL_PARAM to argument)
+        params = listOf(argument),
+        optionalParams = emptyList()
+    )
+
+    fun screenNameWithArguments(
+        argument: String,
+        optionalArgument: String
+    ) = screenNameWithOptionalParams(
+        params = listOf(argument),
+        optionalParams = listOf(OPTIONAL_PARAM to optionalArgument)
     )
 
     @Composable
     override fun Content(navController: NavController, args: Bundle?) {
-        val argument: String = args?.getString(OPTIONAL_PARAM) ?: ":OPTIONAL_IS_EMPTY:"
+        val requiredArgument: String = args?.getString(REQUIRED_PARAM) ?: return
+        val optionalArgument: String = args?.getString(OPTIONAL_PARAM) ?: "OPTIONAL_IS_EMPTY"
 
         Box(modifier = Modifier.fillMaxSize()) {
             IconButton(
@@ -82,8 +88,9 @@ object DefaultScreenWithParams : Screen {
                     .fillMaxWidth(0.7f)
                     .align(Alignment.Center),
                 text = stringResource(
-                    id = string.screen_with_o_param_message,
-                    argument,
+                    id = R.string.screen_with_ro_param_message,
+                    requiredArgument,
+                    optionalArgument
                 ),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.W700
