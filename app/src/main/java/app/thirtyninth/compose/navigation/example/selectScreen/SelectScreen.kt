@@ -132,7 +132,7 @@ object SelectScreen : Screen {
                             .height(80.dp)
                             .fillMaxWidth(),
                         onClick = {
-                            val requiredFieldValue: String? = optionalValue.value.ifEmpty { null }
+                            val requiredFieldValue: String? = requiredValue.value.ifEmpty { null }
                             val optionalFieldValue: String? = optionalValue.value.ifEmpty { null }
 
                             if (requiredFieldValue == null){

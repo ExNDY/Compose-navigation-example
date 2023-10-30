@@ -2,7 +2,7 @@ package app.thirtyninth.compose.navigation.example.screens
 
 import app.thirtyninth.compose.navigation.example.screens.DefaultScreenNameExtensions.defaultScreenName
 
-object ScreenNameExtension {
+object ScreenNameExtensions {
 
     /**
      * Return screen name from screen list of application

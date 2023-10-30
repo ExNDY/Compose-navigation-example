@@ -28,7 +28,7 @@ import androidx.navigation.navArgument
 import app.thirtyninth.compose.navigation.example.R.string
 import app.thirtyninth.compose.navigation.example.screens.DefaultScreenNameExtensions.defaultScreenNameWithOptionalParams
 import app.thirtyninth.compose.navigation.example.screens.Screen
-import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtension.screenNameWithOptionalParams
+import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtensions.screenNameWithOptionalParams
 
 object ScreenWithOptionalParams : Screen {
     private const val OPTIONAL_PARAM = "OPTIONAL_PARAM"

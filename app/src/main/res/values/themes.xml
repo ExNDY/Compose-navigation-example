@@ -2,4 +2,12 @@
 <resources>
 
     <style name="Theme.ComposeNavigationExample" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="AppTheme.Splash" parent="Theme.SplashScreen">
+        <!-- Splash Style -->
+        <item name="windowSplashScreenBackground">@color/purple_200</item>
+        <item name="android:windowBackground">@color/purple_200</item>
+        <item name="postSplashScreenTheme">@style/Theme.ComposeNavigationExample</item>
+    </style>
+
 </resources>

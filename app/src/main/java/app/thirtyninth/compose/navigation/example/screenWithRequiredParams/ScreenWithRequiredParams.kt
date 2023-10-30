@@ -25,10 +25,10 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavController
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
-import app.thirtyninth.compose.navigation.example.R.string
+import app.thirtyninth.compose.navigation.example.R
 import app.thirtyninth.compose.navigation.example.screens.DefaultScreenNameExtensions.defaultScreenNameWithParams
 import app.thirtyninth.compose.navigation.example.screens.Screen
-import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtension.screenNameWithParams
+import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtensions.screenNameWithParams
 
 object ScreenWithRequiredParams: Screen {
     private const val REQUIRED_PARAM = "REQUIRED_PARAM"
@@ -64,7 +64,7 @@ object ScreenWithRequiredParams: Screen {
                 modifier = Modifier
                     .fillMaxWidth(0.7f)
                     .align(Alignment.Center),
-                text = stringResource(id = string.screen_with_r_param_message, argument),
+                text = stringResource(id = R.string.screen_with_r_param_message, argument),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.W700
             )

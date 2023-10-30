@@ -17,7 +17,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtension.getScreenName
+import app.thirtyninth.compose.navigation.example.screens.ScreenNameExtensions.getScreenName
 import app.thirtyninth.compose.navigation.example.selectScreen.SelectScreen
 
 @OptIn(ExperimentalLayoutApi::class)
