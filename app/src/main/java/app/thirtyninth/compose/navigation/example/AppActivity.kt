@@ -6,9 +6,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import app.thirtyninth.compose.navigation.example.screens.RootContainer
+import app.thirtyninth.compose.navigation.example.ui.theme.ComposeNavigationExampleTheme
 
 class MainActivity : ComponentActivity() {
     @Suppress("UnnecessaryApply")
@@ -36,7 +37,10 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            MaterialTheme {
+            ComposeNavigationExampleTheme(
+                darkTheme = isSystemInDarkTheme(),
+                dynamicColor = true
+            ) {
                 RootContainer()
             }
         }
