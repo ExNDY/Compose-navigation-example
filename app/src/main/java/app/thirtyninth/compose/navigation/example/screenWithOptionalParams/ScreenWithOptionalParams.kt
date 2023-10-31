@@ -63,9 +63,7 @@ object ScreenWithOptionalParams : Screen {
                     .statusBarsPadding()
                     .clip(RoundedCornerShape(12.dp))
                     .background(Color.Transparent),
-                onClick = {
-                    navController.popBackStack()
-                }
+                onClick = navController::popBackStack
             ) {
                 Icon(imageVector = Filled.ArrowBackIosNew, contentDescription = null)
             }

@@ -99,13 +99,15 @@ object SelectScreen : Screen {
                         }
                     ) {
                         Icon(
-                            modifier = Modifier.fillMaxSize().padding(12.dp),
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(12.dp),
                             imageVector = Icons.Rounded.Clear,
                             contentDescription = null
                         )
                     }
                 }
-                
+
                 NavigationButton(textResId = R.string.navigate_to_default) {
                     navController.navigate(
                         DefaultScreen.screenName
